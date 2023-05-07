@@ -29,6 +29,11 @@ try {
   console.log("mongoose disconnected", error);
 }
 
+
+
+app.get("/",(req,res)=>{
+  res.send({message:"mongodb and server running successfully"})
+});
 app.listen(PORT, () => {
   console.log(`${PORT} is connected succesfully`);
 });
