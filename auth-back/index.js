@@ -18,7 +18,7 @@ app.use(cors());
 
 app.use("/signUp",signUpRoute);
 app.use("/logIn",loginRoute);
-app.use("/reset",ResetRoutes);
+app.use("/",ResetRoutes);
 
 app.get("/",(req,res)=>{
   res.send("Welcome and Reset yoiur Password")
@@ -43,9 +43,9 @@ try {
 
 
 
-app.get("/",(req,res)=>{
-  res.send({message:"mongodb and server running successfully"})
-});
+// app.get("/",(req,res)=>{
+//   res.send({message:"mongodb and server running successfully"})
+// });
 app.listen(PORT, () => {
   console.log(`${PORT} is connected succesfully`);
 });
