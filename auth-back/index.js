@@ -18,7 +18,7 @@ app.use(cors());
 
 app.use("/signUp",signUpRoute);
 app.use("/logIn",loginRoute);
-app.use("/",ResetRoutes);
+app.use("/reset",ResetRoutes);
 
 app.get("/",(req,res)=>{
   res.send("Welcome and Reset yoiur Password")
