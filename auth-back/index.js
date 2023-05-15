@@ -19,9 +19,6 @@ app.use("/signUp", signUpRoute);
 app.use("/logIn", loginRoute);
 app.use("/reset", ResetRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Welcome and Reset yoiur Password");
-});
 
 const PORT = process.env.PORT;
 
@@ -38,9 +35,9 @@ try {
   console.log("mongoose disconnected", error);
 }
 
-// app.get("/",(req,res)=>{
-//   res.send({message:"mongodb and server running successfully"})
-// });
+app.get("/",(req,res)=>{
+  res.send({message:"Welcome and Reset your Password"})
+});
 app.listen(PORT, () => {
   console.log(`${PORT} is connected succesfully`);
 });
